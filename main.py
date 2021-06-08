@@ -9,7 +9,7 @@ print("Welcome to your Contacts App \n\
  Connect with people you know")
 
 def base():
-    act = input("N. New Contact     D. Delete Contact	S. Search Contact     V. View All     0. Exit  ")
+    act = input("N. New Contact     D. Delete Contact	S. Search Contact     V. View All     I. Import Contacts      0. Exit  ")
     if act=='N':
         c.saveDetails()
         base()
@@ -21,6 +21,9 @@ def base():
         base()
     elif act=='V':
         c.viewAll()
+        base()
+    elif act=='I':
+        c.import_contacts()
         base()
     elif act=='0':
         print('See ya later!')
