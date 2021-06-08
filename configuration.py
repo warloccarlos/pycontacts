@@ -79,6 +79,7 @@ class ConfigMain:
 
     def import_contacts(self):
         try:
+            print("For initial release, only CSV are supported")
             file = input("Please provide the name of file with path to import: ")
             con = mysql.connector.connect(host=cfg.sql['host'], user=cfg.sql['user'], \
             password=cfg.sql['password'], database=cfg.sql['database'], port=cfg.sql['port'])
