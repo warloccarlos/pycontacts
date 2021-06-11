@@ -1,9 +1,11 @@
 #! /usr/bin/python
 
 import sys
+from createdb import Createdb
 from configuration import ConfigMain
 
 c = ConfigMain()
+cdb = Createdb()
 
 print("Welcome to your Contacts App \n\
  Connect with people you know")
@@ -36,4 +38,9 @@ def base():
         else:
             sys.exit(0)
 
-base()
+i = cdb.checkdb()
+
+if i ==1:
+    base()
+else:
+    cdb.created()
